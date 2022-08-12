@@ -105,6 +105,14 @@ as deprecated:
 
 TBD
 
+# Current algorithm usage levels
+
+The DNSSEC scanning project by Viktor Dukhovni and Wes Hardaker
+highlights the current deployment of various algorithms on the
+https://stats.dnssec-tools.org/ website.
+
+[RFC Editor: please delete this section upon publication]
+
 # Github Version of this document
 
 While this document is under development, it can be viewed, tracked,
