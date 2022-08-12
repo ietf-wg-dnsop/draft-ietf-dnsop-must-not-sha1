@@ -70,7 +70,8 @@ Table of Contents
      6.1.  Normative References  . . . . . . . . . . . . . . . . . .   3
      6.2.  Informative References  . . . . . . . . . . . . . . . . .   4
    Appendix A.  Acknowledgments  . . . . . . . . . . . . . . . . . .   5
-   Appendix B.  Github Version of this document  . . . . . . . . . .   5
+   Appendix B.  Current algorithm usage levels . . . . . . . . . . .   5
+   Appendix C.  Github Version of this document  . . . . . . . . . .   5
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
 
 1.  Introduction
@@ -103,9 +104,8 @@ Table of Contents
    The SHA-1 [RFC3685] algorithm MUST NOT be used when creating DS
    records.
 
-   The RSASHA1 [RFC4034], DSA-NSEC3-SHA1 [RFC5155], and
-   RSASHA1-NSEC3-SHA1 [RFC5155] algorithms MUST NOT be used when
-   creating DNSKEY and RRSIG records.
+
+
 
 
 
@@ -113,6 +113,10 @@ Hardaker                Expires 13 February 2023                [Page 2]
 
 Internet-Draft         MUST NOT DNSSEC with SHA-1            August 2022
 
+
+   The RSASHA1 [RFC4034], DSA-NSEC3-SHA1 [RFC5155], and
+   RSASHA1-NSEC3-SHA1 [RFC5155] algorithms MUST NOT be used when
+   creating DNSKEY and RRSIG records.
 
 3.  Security Considerations
 
@@ -157,10 +161,6 @@ Internet-Draft         MUST NOT DNSSEC with SHA-1            August 2022
               (SHA1)", RFC 3174, DOI 10.17487/RFC3174, September 2001,
               <https://www.rfc-editor.org/info/rfc3174>.
 
-   [RFC3685]  Daboo, C., "SIEVE Email Filtering: Spamtest and VirusTest
-              Extensions", RFC 3685, DOI 10.17487/RFC3685, February
-              2004, <https://www.rfc-editor.org/info/rfc3685>.
-
 
 
 
@@ -169,6 +169,10 @@ Hardaker                Expires 13 February 2023                [Page 3]
 
 Internet-Draft         MUST NOT DNSSEC with SHA-1            August 2022
 
+
+   [RFC3685]  Daboo, C., "SIEVE Email Filtering: Spamtest and VirusTest
+              Extensions", RFC 3685, DOI 10.17487/RFC3685, February
+              2004, <https://www.rfc-editor.org/info/rfc3685>.
 
    [RFC4033]  Arends, R., Austein, R., Larson, M., Massey, D., and S.
               Rose, "DNS Security Introduction and Requirements",
@@ -212,10 +216,6 @@ Internet-Draft         MUST NOT DNSSEC with SHA-1            August 2022
 
 6.2.  Informative References
 
-   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
-              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
-
 
 
 
@@ -226,6 +226,10 @@ Hardaker                Expires 13 February 2023                [Page 4]
 Internet-Draft         MUST NOT DNSSEC with SHA-1            August 2022
 
 
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
+
    [RFC8499]  Hoffman, P., Sullivan, A., and K. Fujiwara, "DNS
               Terminology", BCP 219, RFC 8499, DOI 10.17487/RFC8499,
               January 2019, <https://www.rfc-editor.org/info/rfc8499>.
@@ -234,7 +238,15 @@ Appendix A.  Acknowledgments
 
    TBD
 
-Appendix B.  Github Version of this document
+Appendix B.  Current algorithm usage levels
+
+   The DNSSEC scanning project by Viktor Dukhovni and Wes Hardaker
+   highlights the current deployment of various algorithms on the
+   https://stats.dnssec-tools.org/ website.
+
+   [RFC Editor: please delete this section upon publication]
+
+Appendix C.  Github Version of this document
 
    While this document is under development, it can be viewed, tracked,
    fill here:
@@ -247,18 +259,6 @@ Author's Address
    USC/ISI
 
    Email: ietf@hardakers.net
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
