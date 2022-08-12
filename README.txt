@@ -239,7 +239,7 @@ Appendix B.  Github Version of this document
    While this document is under development, it can be viewed, tracked,
    fill here:
 
-   https://github.com/hardaker/...
+   https://github.com/hardaker/draft-hardaker-dnsop-must-not-sha1
 
 Author's Address
 
