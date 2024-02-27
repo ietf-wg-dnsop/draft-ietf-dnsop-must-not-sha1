@@ -14,6 +14,11 @@ author:
     name: Wes Hardaker
     org: USC/ISI
     email: ietf@hardakers.net
+  -
+    ins: W. Kumari
+    name: Warren Kumari
+    org: Google
+    email: warren@kumari.net
 
 normative:
   RFC2119:
@@ -27,6 +32,16 @@ normative:
   RFC5702:
   RFC6605:
   RFC8080:
+  DNSKEY-IANA:
+    author:
+      name: IANA
+    target: "https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml"
+    title: Domain Name System Security (DNSSEC) Algorithm Numbers
+  DS-IANA:
+    author:
+      name: IANA
+    target: "http://www.iana.org/assignments/ds-rr-types"
+    title: Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms
 
 informative:
   RFC8499:
@@ -34,7 +49,7 @@ informative:
 
 --- abstract
 
-This document retires the use of SHA-1 within DNSSEC
+This document retires the use of SHA-1 within DNSSEC.
 
 --- middle
 
@@ -66,10 +81,18 @@ This document retires the use of SHA-1 within DNSSEC.
 # Deprecating SHA-1 algorithms in DNSSEC
 
 The SHA-1 {{RFC3685}} algorithm MUST NOT be used when creating DS records.
+Validating resolvers MUST treat DS records as insecure.  If no other DS
+records of accepted cryptographic algorithms are available, the DNS
+records below the delegation point MUST be treated as insecure.
 
-The RSASHA1 {{RFC4034}}, DSA-NSEC3-SHA1 {{RFC5155}},
-and RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms MUST NOT be used when
-creating DNSKEY and RRSIG records. 
+The RSASHA1 {{RFC4034}}, DSA-NSEC3-SHA1 {{RFC5155}}, and
+RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms MUST NOT be used when
+creating DNSKEY and RRSIG records.  Validating resolvers MUST treat
+RRSIG records created from DNSKEY records using these algorithms as
+insecure.  If no other RRSIG records of accepted cryptographic
+algorithms are available, the validating resolver MUST consider the
+associated resource records as Bogus.
+
 
 # Security Considerations
 
@@ -87,16 +110,14 @@ records.
 
 # IANA Considerations
 
-IANA is requested to mark the following Delegation Signer (DS)
-Resource Record (RR) digest type algorithms as deprecated:
+IANA is requested to set the "DNSSEC Validation" of the "Digest
+Algorithms" registry {{DS-IANA}} to MUST NOT.
 
-- SHA-1
-
-IANA is requested to mark the following DNS Security Algorithm Numbers
-as deprecated:
+IANA is requested to set the "Recommended for DNSSEC Validation"
+column of the DNS Security Algorithm Numbers registry {{DNSKEY-IANA}}
+to MUST NOT:
 
 - RSASHA1
-- DSA-NSEC3-SHA1
 - RSASHA1-NSEC3-SHA1
 
 --- back
