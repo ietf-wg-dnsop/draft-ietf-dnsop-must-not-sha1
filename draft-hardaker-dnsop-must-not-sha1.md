@@ -111,14 +111,14 @@ records.
 # IANA Considerations
 
 IANA is requested to set the "DNSSEC Validation" of the "Digest
-Algorithms" registry {{DS-IANA}} to MUST NOT.
+Algorithms" registry {{DS-IANA}} for SHA-1 (1) to MUST NOT.
 
 IANA is requested to set the "Recommended for DNSSEC Validation"
 column of the DNS Security Algorithm Numbers registry {{DNSKEY-IANA}}
 to MUST NOT:
 
-- RSASHA1
-- RSASHA1-NSEC3-SHA1
+- RSASHA1 (5)
+- RSASHA1-NSEC3-SHA1 (7)
 
 --- back
 
