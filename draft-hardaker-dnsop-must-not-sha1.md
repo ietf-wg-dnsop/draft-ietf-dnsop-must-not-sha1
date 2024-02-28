@@ -4,6 +4,7 @@ abbrev: MUST NOT DNSSEC with SHA-1
 docname: draft-hardaker-dnsop-must-not-sha1-01
 category: std
 ipr: trust200902
+stream: IETF
 
 stand_alone: yes
 pi: [toc, sortrefs, symrefs, docmapping]
