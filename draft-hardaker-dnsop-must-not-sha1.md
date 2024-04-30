@@ -69,7 +69,8 @@ DNSKEY and RRSIG records (such as RSASHA256 ({{RFC5702}}), RSASHA512
 {{RFC6605}}, ED25519 {{RFC8080}}, and ED448 {{RFC8080}}), the use of
 SHA-1 is no longer needed.
 
-This document retires the use of SHA-1 within DNSSEC.
+This document deprecates the use of the SHA-1 algorithm for DS records
+and RSASHA1 and RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
 
 ## Requirements notation
 
