@@ -82,7 +82,7 @@ This document retires the use of SHA-1 within DNSSEC.
 # Deprecating SHA-1 algorithms in DNSSEC
 
 The SHA-1 {{RFC3685}} algorithm MUST NOT be used when creating DS records.
-Validating resolvers MUST treat DS records as insecure.  If no other DS
+Validating resolvers MUST treat SHA-1 DS records as insecure.  If no other DS
 records of accepted cryptographic algorithms are available, the DNS
 records below the delegation point MUST be treated as insecure.
 
