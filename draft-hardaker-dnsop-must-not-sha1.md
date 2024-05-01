@@ -90,10 +90,10 @@ records below the delegation point MUST be treated as insecure.
 The RSASHA1 {{RFC4034}}, DSA-NSEC3-SHA1 {{RFC5155}}, and
 RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms MUST NOT be used when
 creating DNSKEY and RRSIG records.  Validating resolvers MUST treat
-RRSIG records created from DNSKEY records using these algorithms as
-insecure.  If no other RRSIG records of accepted cryptographic
-algorithms are available, the validating resolver MUST consider the
-associated resource records as Bogus.
+RRSIG records created from DNSKEY records using these algorithms as an
+unsupported algorithm. If no other RRSIG records of accepted
+cryptographic algorithms are available, the validating resolver MUST
+consider the associated resource records as Insecure.
 
 
 # Security Considerations
