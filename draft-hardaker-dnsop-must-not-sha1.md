@@ -66,10 +66,13 @@ stronger cryptographic strength are now widely available for DS
 records (such as SHA-256 {{RFC4509}}, SHA-384 ({{RFC6605}})) and for
 DNSKEY and RRSIG records (such as RSASHA256 ({{RFC5702}}), RSASHA512
 ({{RFC5702}}), ECDSAP256SHA256 {{RFC6605}}, ECDSAP384SHA384
-{{RFC6605}}, ED25519 {{RFC8080}}, and ED448 {{RFC8080}}), the use of
-SHA-1 is no longer needed.
+{{RFC6605}}, ED25519 {{RFC8080}}, and ED448 {{RFC8080}}). Further,
+support for validating SHA-1 based signatures has been removed from
+relevant systems. As a result, SHA-1 is no longer interoperable in
+the context of DNSSEC. As adequate alternatives exist, its use is no
+longer advisable.
 
-This document deprecates the use of the SHA-1 algorithm for DS records
+This document thus deprecates the use of the SHA-1 algorithm for DS records
 and RSASHA1 and RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
 
 ## Requirements notation
@@ -105,7 +108,7 @@ derived uses.
 # Operational Considerations
 
 Zone owners currently making use of SHA-1 based algorithms should
-immediate switch to algorithms with stronger cryptographic strengths,
+immediately switch to algorithms with stronger cryptographic strengths,
 such as those listed in the introduction.  DNS registries {{?RFC8499}}
 should prohibit their clients to upload and publish SHA-1 based DS
 records.
