@@ -72,8 +72,8 @@ relevant systems. As a result, SHA-1 is no longer interoperable in
 the context of DNSSEC. As adequate alternatives exist, its use is no
 longer advisable.
 
-This document thus deprecates the use of the SHA-1 algorithm for DS records
-and RSASHA1 and RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
+This document thus deprecates the use of RSASHA1 and RSASHA1-NSEC3-SHA1
+for DNS Security Algorithms.
 
 ## Requirements notation
 
@@ -85,42 +85,41 @@ and RSASHA1 and RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
 
 # Deprecating SHA-1 algorithms in DNSSEC
 
-The SHA-1 {{RFC3685}} algorithm MUST NOT be used when creating DS records.
-Validating resolvers MUST treat SHA-1 DS records as insecure.  If no other DS
-records of accepted cryptographic algorithms are available, the DNS
-records below the delegation point MUST be treated as insecure.
-
 The RSASHA1 {{RFC4034}}, DSA-NSEC3-SHA1 {{RFC5155}}, and
 RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms MUST NOT be used when
-creating DNSKEY and RRSIG records.  Validating resolvers MUST treat
-RRSIG records created from DNSKEY records using these algorithms as an
-unsupported algorithm. If no other RRSIG records of accepted
-cryptographic algorithms are available, the validating resolver MUST
-consider the associated resource records as Insecure.
+creating DNSKEY and RRSIG records.
+
+Validating resolvers MAY treat RRSIG records created from DNSKEY
+records using these algorithms as an unsupported algorithm.
 
 
 # Security Considerations
 
-This document increases the security of the DNSSEC ecosystem by
-deprecating algorithms that make use of older algorithms with SHA-1
-derived uses.
+This document reduces the risk that a zone cannot be validated due
+to lack of SHA-1 support in a validator, by guiding signers to choose
+a more interoperable signing algorithm.
 
 # Operational Considerations
 
 Zone owners currently making use of SHA-1 based algorithms should
 immediately switch to algorithms with stronger cryptographic strengths,
-such as those listed in the introduction.  DNS registries {{?RFC8499}}
-should prohibit their clients to upload and publish SHA-1 based DS
-records.
+such as those listed in the introduction.
 
 # IANA Considerations
 
-IANA is requested to set the "DNSSEC Validation" of the "Digest
-Algorithms" registry {{DS-IANA}} for SHA-1 (1) to MUST NOT.
+IANA is requested to set the "Status" field of the "Digest
+Algorithms" registry {{DS-IANA}} for SHA-1 (1) to OPTIONAL.
+
+IANA is requested to set the "Recommended for DNSSEC Signin"
+column of the DNS Security Algorithm Numbers registry {{DNSKEY-IANA}}
+to MUST NOT:
+
+- RSASHA1 (5)
+- RSASHA1-NSEC3-SHA1 (7)
 
 IANA is requested to set the "Recommended for DNSSEC Validation"
 column of the DNS Security Algorithm Numbers registry {{DNSKEY-IANA}}
-to MUST NOT:
+to OPTIONAL:
 
 - RSASHA1 (5)
 - RSASHA1-NSEC3-SHA1 (7)
