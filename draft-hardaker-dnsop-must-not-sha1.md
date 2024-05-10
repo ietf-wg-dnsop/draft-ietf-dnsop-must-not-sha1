@@ -108,6 +108,9 @@ such as those listed in the introduction.
 
 # IANA Considerations
 
+IANA is requested to set the "Status" field of the "Digest
+Algorithms" registry {{DS-IANA}} for SHA-1 (1) to OPTIONAL.
+
 IANA is requested to set the "Recommended for DNSSEC Signing"
 column of the DNS Security Algorithm Numbers registry {{DNSKEY-IANA}}
 to MUST NOT:
