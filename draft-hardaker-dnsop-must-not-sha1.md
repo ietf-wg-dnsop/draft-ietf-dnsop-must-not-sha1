@@ -85,9 +85,8 @@ for DNS Security Algorithms.
 
 # Deprecating SHA-1 algorithms in DNSSEC
 
-The RSASHA1 {{RFC4034}}, DSA-NSEC3-SHA1 {{RFC5155}}, and
-RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms MUST NOT be used when
-creating DNSKEY and RRSIG records.
+The RSASHA1 {{RFC4034}} and RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms
+MUST NOT be used when creating DNSKEY and RRSIG records.
 
 Validating resolvers SHOULD support validation using these algorithms
 but MAY treat RRSIG records created from DNSKEY records using these
