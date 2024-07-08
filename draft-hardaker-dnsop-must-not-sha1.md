@@ -72,8 +72,8 @@ some systems. As a result, SHA-1 is no longer fully interoperable in
 the context of DNSSEC. As adequate alternatives exist, its use is no
 longer advisable.
 
-This document thus deprecates the use of RSASHA1 and RSASHA1-NSEC3-SHA1
-for DNS Security Algorithms.
+This document thus further deprecates the use of RSASHA1 and
+RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
 
 ## Requirements notation
 
@@ -88,10 +88,11 @@ for DNS Security Algorithms.
 The RSASHA1 {{RFC4034}} and RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms
 MUST NOT be used when creating DNSKEY and RRSIG records.
 
-Validating resolvers SHOULD support validation using these algorithms
-but MAY treat RRSIG records created from DNSKEY records using these
-algorithms as an unsupported algorithm.
-
+Validating resolvers MUST continue to support validation using these
+algorithms as they are diminishing in use but still actively in use
+for some domains as of this publication.  Validating resolvers MAY
+treat RRSIG records created from DNSKEY records using these algorithms
+as an unsupported algorithm.
 
 # Security Considerations
 
@@ -107,22 +108,14 @@ such as those listed in the introduction.
 
 # IANA Considerations
 
-IANA is requested to set the "Status" field of the "Digest
-Algorithms" registry {{DS-IANA}} for SHA-1 (1) to OPTIONAL.
+IANA is requested to set the "Use for DNSSEC Delegation" field of the
+"Digest Algorithms" registry {{DS-IANA}} for SHA-1 (1) to MUST NOT.
 
-IANA is requested to set the "Recommended for DNSSEC Signing"
-column of the DNS Security Algorithm Numbers registry {{DNSKEY-IANA}}
-to MUST NOT:
+IANA is requested to set the "Use for DNSSEC Signing" column of the
+DNS Security Algorithm Numbers registry {{DNSKEY-IANA}} to MUST NOT
+for the RSASHA1 (5) and RSASHA1-NSEC3-SHA1 (7) algorithms.
 
-- RSASHA1 (5)
-- RSASHA1-NSEC3-SHA1 (7)
-
-IANA is requested to set the "Recommended for DNSSEC Validation"
-column of the DNS Security Algorithm Numbers registry {{DNSKEY-IANA}}
-to SHOULD:
-
-- RSASHA1 (5)
-- RSASHA1-NSEC3-SHA1 (7)
+All other columns should remain as currently specified.
 
 --- back
 
