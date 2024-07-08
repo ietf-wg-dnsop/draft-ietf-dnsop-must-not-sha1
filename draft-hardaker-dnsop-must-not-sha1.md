@@ -69,7 +69,7 @@ DNSKEY and RRSIG records (such as RSASHA256 ({{RFC5702}}), RSASHA512
 {{RFC6605}}, ED25519 {{RFC8080}}, and ED448 {{RFC8080}}). Further,
 support for validating SHA-1 based signatures has been removed from
 some systems. As a result, SHA-1 is no longer fully interoperable in
-the context of DNSSEC. As adequate alternatives exist, its use is no
+the context of DNSSEC. As adequate alternatives exist, the use of SHA-1 is no
 longer advisable.
 
 This document thus further deprecates the use of RSASHA1 and
