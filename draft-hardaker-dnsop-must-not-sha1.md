@@ -129,7 +129,7 @@ The DNSSEC scanning project by Viktor Dukhovni and Wes Hardaker
 highlights the current deployment of various algorithms on the
 https://stats.dnssec-tools.org/ website.
 
-[RFC Editor: please delete this section upon publication]
+<RFC Editor: please delete this section upon publication>
 
 # Github Version of this document
 
