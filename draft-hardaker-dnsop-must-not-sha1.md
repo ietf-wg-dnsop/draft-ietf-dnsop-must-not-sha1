@@ -24,7 +24,6 @@ author:
 normative:
   RFC2119:
   RFC3174:
-  RFC3685:
   RFC4033:
   RFC4034:
   RFC4035:
@@ -45,7 +44,7 @@ normative:
     title: Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms
 
 informative:
-  RFC8499:
+
 
 
 --- abstract
