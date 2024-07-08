@@ -1,7 +1,7 @@
 ---
 title: "Remove SHA-1 from active use within DNSSEC"
 abbrev: MUST NOT DNSSEC with SHA-1
-docname: draft-hardaker-dnsop-must-not-sha1-03
+docname: draft-ietf-dnsop-must-not-sha1-00
 category: std
 ipr: trust200902
 stream: IETF
