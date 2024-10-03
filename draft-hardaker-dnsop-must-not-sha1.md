@@ -126,9 +126,9 @@ to MUST NOT:
 # Acknowledgments
 
 The authors appreciate the comments and suggestions from the following
-IETF participants in helping produce this document: Mark Andrews, Mark
-Andrews, Paul Wouters and the many members of the DNSOP working group
-that discussed this draft.
+IETF participants in helping produce this document: Mark Andrews,
+Peter Dickson, Peter Thomassen, Paul Wouters and the many members of
+the DNSOP working group that discussed this draft.
 
 # Current algorithm usage levels
 
