@@ -140,3 +140,4 @@ fill here:
 
 https://github.com/hardaker/draft-hardaker-dnsop-must-not-sha1
 
+<RFC Editor: please delete this section upon publication>
