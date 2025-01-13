@@ -1,5 +1,5 @@
 ---
-title: "Deprecating the use of SHA1 in DNSSEC signature algorithms"
+title: "Deprecating the use of SHA-1 in DNSSEC signature algorithms"
 abbrev: MUST NOT DNSSEC with SHA-1
 docname: draft-ietf-dnsop-must-not-sha1-01
 category: std
@@ -81,7 +81,7 @@ RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
    in BCP 14 {{RFC2119}} {{?RFC8174}} when, and only when, they appear
    in all capitals, as shown here.
 
-# Deprecating SHA-1 algorithms in DNSSEC
+# Deprecating RSASHA1 and RSASHA1-NSEC3-SHA1 algorithms in DNSSEC
 
 The RSASHA1 {{RFC4034}} and RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms
 MUST NOT be used when creating DNSKEY and RRSIG records.
@@ -121,9 +121,9 @@ All other columns should remain as currently specified.
 
 The authors appreciate the comments and suggestions from the following IETF
 participants in helping produce this document: Mark Andrews, Steve Crocker,
-  Russ Housely, Shumon Huque, S Moonesamy, Peter Dickson, Peter Thomassen,
-Stefan Ubbink, Paul Wouters and the many members of the DNSOP working group
-that discussed this draft.
+Russ Housely, Shumon Huque, Paul Hoffman, S Moonesamy, Peter Dickson, Peter
+Thomassen, Stefan Ubbink, Paul Wouters, Tim Wicinski,  and the many members of
+the DNSOP working group that discussed this draft.
 
 
 # Current algorithm usage levels
