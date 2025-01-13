@@ -1,5 +1,5 @@
 ---
-title: "Remove SHA-1 from active use within DNSSEC"
+title: "Deprecating the use of SHA1 in DNSSEC signature algorithms"
 abbrev: MUST NOT DNSSEC with SHA-1
 docname: draft-ietf-dnsop-must-not-sha1-01
 category: std
@@ -49,7 +49,8 @@ informative:
 
 --- abstract
 
-This document retires the use of SHA-1 within DNSSEC.
+This document deprecates the use of the RSASHA1 and RSASHA1-NSEC3-SHA1
+algorithms for the creation of DNSKEY and RRSIG records.
 
 --- middle
 
@@ -119,9 +120,10 @@ All other columns should remain as currently specified.
 # Acknowledgments
 
 The authors appreciate the comments and suggestions from the following IETF
-participants in helping produce this document: Mark Andrews, Peter Dickson,
-Peter Thomassen, Stefan Ubbink, Paul Wouters and the many members of the DNSOP
-working group that discussed this draft.
+participants in helping produce this document: Mark Andrews, Steve Crocker,
+  Russ Housely, Shumon Huque, S Moonesamy, Peter Dickson, Peter Thomassen,
+Stefan Ubbink, Paul Wouters and the many members of the DNSOP working group
+that discussed this draft.
 
 
 # Current algorithm usage levels
