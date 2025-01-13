@@ -55,21 +55,19 @@ This document retires the use of SHA-1 within DNSSEC.
 
 # Introduction
 
-The security of the SHA-1 algorithm {{RFC3174}} has been slowly
-diminishing over time as various forms of attacks have weakened its
-cryptographic underpinning.  DNSSEC {{RFC4033}} {{RFC4034}}
-{{RFC4035}} originally made extensive use of SHA-1 as a cryptographic
-verification algorithm in RRSIG and Delegation Signer (DS) records,
-for example.  Since then, multiple other signing algorithms with
-stronger cryptographic strength are now widely available for DS
-records (such as SHA-256 {{RFC4509}}, SHA-384 ({{RFC6605}})) and for
-DNSKEY and RRSIG records (such as RSASHA256 ({{RFC5702}}), RSASHA512
-({{RFC5702}}), ECDSAP256SHA256 {{RFC6605}}, ECDSAP384SHA384
-{{RFC6605}}, ED25519 {{RFC8080}}, and ED448 {{RFC8080}}). Further,
-support for validating SHA-1 based signatures has been removed from
-some systems. As a result, SHA-1 is no longer fully interoperable in
-the context of DNSSEC. As adequate alternatives exist, the use of SHA-1 is no
-longer advisable.
+The security of the SHA-1 algorithm {{RFC3174}} has been slowly diminishing
+over time as various forms of attacks have weakened its cryptographic
+underpinning.  DNSSEC {{RFC9364}} originally made extensive use of SHA-1 as a
+cryptographic verification algorithm in RRSIG and Delegation Signer (DS)
+records, for example.  Since then, multiple other signing algorithms with
+stronger cryptographic strength are now widely available for DS records (such
+as SHA-256 {{RFC4509}}, SHA-384 ({{RFC6605}})) and for DNSKEY and RRSIG records
+(such as RSASHA256 ({{RFC5702}}), RSASHA512 ({{RFC5702}}), ECDSAP256SHA256
+{{RFC6605}}, ECDSAP384SHA384 {{RFC6605}}, ED25519 {{RFC8080}}, and ED448
+{{RFC8080}}). Further, support for validating SHA-1 based signatures has been
+removed from some systems. As a result, SHA-1 is no longer fully interoperable
+in the context of DNSSEC. As adequate alternatives exist, the use of SHA-1 is
+no longer advisable.
 
 This document thus further deprecates the use of RSASHA1 and
 RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
@@ -120,10 +118,11 @@ All other columns should remain as currently specified.
 
 # Acknowledgments
 
-The authors appreciate the comments and suggestions from the following
-IETF participants in helping produce this document: Mark Andrews,
-Peter Dickson, Peter Thomassen, Paul Wouters and the many members of
-the DNSOP working group that discussed this draft.
+The authors appreciate the comments and suggestions from the following IETF
+participants in helping produce this document: Mark Andrews, Peter Dickson,
+Peter Thomassen, Stefan Ubbink, Paul Wouters and the many members of the DNSOP
+working group that discussed this draft.
+
 
 # Current algorithm usage levels
 
