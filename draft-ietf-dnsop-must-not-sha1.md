@@ -32,6 +32,7 @@ normative:
   RFC5702:
   RFC6605:
   RFC8080:
+  RFC9364:
   DNSKEY-IANA:
     author:
       name: IANA

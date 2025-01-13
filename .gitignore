@@ -7,3 +7,4 @@ rfc2629xslt
 issues.json
 pulls.json
 *.DS_Store
+.refcache/*
