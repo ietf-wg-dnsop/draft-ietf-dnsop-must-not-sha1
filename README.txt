@@ -5,12 +5,12 @@
 Network Working Group                                        W. Hardaker
 Internet-Draft                                                   USC/ISI
 Intended status: Standards Track                               W. Kumari
-Expires: 17 July 2025                                             Google
-                                                         13 January 2025
+Expires: 25 July 2025                                             Google
+                                                         21 January 2025
 
 
       Deprecating the use of SHA-1 in DNSSEC signature algorithms
-                   draft-ietf-dnsop-must-not-sha1-01
+                   draft-ietf-dnsop-must-not-sha1-02
 
 Abstract
 
@@ -33,7 +33,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 July 2025.
+   This Internet-Draft will expire on 25 July 2025.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Hardaker & Kumari         Expires 17 July 2025                  [Page 1]
+Hardaker & Kumari         Expires 25 July 2025                  [Page 1]
 
 Internet-Draft         MUST NOT DNSSEC with SHA-1           January 2025
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Hardaker & Kumari         Expires 17 July 2025                  [Page 2]
+Hardaker & Kumari         Expires 25 July 2025                  [Page 2]
 
 Internet-Draft         MUST NOT DNSSEC with SHA-1           January 2025
 
@@ -165,7 +165,7 @@ Internet-Draft         MUST NOT DNSSEC with SHA-1           January 2025
 
 
 
-Hardaker & Kumari         Expires 17 July 2025                  [Page 3]
+Hardaker & Kumari         Expires 25 July 2025                  [Page 3]
 
 Internet-Draft         MUST NOT DNSSEC with SHA-1           January 2025
 
@@ -221,7 +221,7 @@ Internet-Draft         MUST NOT DNSSEC with SHA-1           January 2025
 
 
 
-Hardaker & Kumari         Expires 17 July 2025                  [Page 4]
+Hardaker & Kumari         Expires 25 July 2025                  [Page 4]
 
 Internet-Draft         MUST NOT DNSSEC with SHA-1           January 2025
 
@@ -277,4 +277,4 @@ Authors' Addresses
 
 
 
-Hardaker & Kumari         Expires 17 July 2025                  [Page 5]
+Hardaker & Kumari         Expires 25 July 2025                  [Page 5]
