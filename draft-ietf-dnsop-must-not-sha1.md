@@ -5,6 +5,7 @@ docname: draft-ietf-dnsop-must-not-sha1-02
 category: std
 ipr: trust200902
 stream: IETF
+updates: 4034, 5155
 
 stand_alone: yes
 pi: [toc, sortrefs, symrefs, docmapping]
@@ -52,6 +53,8 @@ informative:
 
 This document deprecates the use of the RSASHA1 and RSASHA1-NSEC3-SHA1
 algorithms for the creation of DNSKEY and RRSIG records.
+
+It updates RFC4034 and RFC5155 as it deprecates the use of these algorithms.
 
 --- middle
 
