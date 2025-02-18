@@ -1,7 +1,7 @@
 ---
 title: "Deprecating the use of SHA-1 in DNSSEC signature algorithms"
 abbrev: MUST NOT DNSSEC with SHA-1
-docname: draft-ietf-dnsop-must-not-sha1-02
+docname: draft-ietf-dnsop-must-not-sha1-03
 category: std
 ipr: trust200902
 stream: IETF
