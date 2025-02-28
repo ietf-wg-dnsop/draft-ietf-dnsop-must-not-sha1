@@ -92,9 +92,11 @@ MUST NOT be used when creating DNSKEY and RRSIG records.
 
 Validating resolvers MUST continue to support validation using these
 algorithms as they are diminishing in use but still actively in use
-for some domains as of this publication.  Thus, validating resolvers MAY
-treat RRSIG records created from DNSKEY records using these algorithms
-as an unsupported algorithm.
+for some domains as of this publication.  Because of RSASHA1 and
+RSASHA1-NSEC3-SHA1's non-zero use, deployed validating resolvers MAY
+continue to validate RRSIG records that use these algorithms.
+Validating resolvers deployed in more security strict environments MAY
+wish to treat these RRSIG records as an unsupported algorithm.
 
 # Security Considerations
 
