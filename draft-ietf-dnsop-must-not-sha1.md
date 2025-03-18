@@ -24,6 +24,7 @@ author:
 
 normative:
   RFC2119:
+  RFC3110:
   RFC3174:
   RFC4033:
   RFC4034:
