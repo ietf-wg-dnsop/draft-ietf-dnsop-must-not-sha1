@@ -62,7 +62,8 @@ It updates RFC4034 and RFC5155 as it deprecates the use of these algorithms.
 
 The security of the SHA-1 algorithm {{RFC3174}} has been slowly diminishing
 over time as various forms of attacks have weakened its cryptographic
-underpinning.  DNSSEC {{RFC9364}} originally made extensive use of SHA-1 as a
+underpinning.  DNSSEC {{RFC9364}} originally {{RFC3110}} made extensive use
+of SHA-1 as a
 cryptographic hash algorithm in RRSIG and Delegation Signer (DS)
 records, for example.  Since then, multiple other algorithms with
 stronger cryptographic strength are now widely available for DS records (such
@@ -101,9 +102,8 @@ records as an unsupported algorithm.
 
 # Security Considerations
 
-This document reduces the risk that a zone cannot be validated due
-to lack of SHA-1 support in a validator, by guiding signers to choose
-a more secure and interoperable algorithm.
+This document deprecates the use of RSASHA1 and RSASHA1-NSEC3-SHA1
+signatures since they are no longer considered to be secure.
 
 # Operational Considerations
 
@@ -129,9 +129,9 @@ All other columns should remain as currently specified.
 The authors appreciate the comments and suggestions from the following
 IETF participants in helping produce this document: Mark Andrews,
 Steve Crocker, Russ Housely, Shumon Huque, Paul Hoffman, Barry Leiba,
-S Moonesamy, Peter Dickson, Peter Thomassen, Stefan Ubbink, Paul
-Wouters, Tim Wicinski, and the many members of the DNSOP working group
-that discussed this draft.
+S Moonesamy, Yoav Nir, Peter Dickson, Peter Thomassen, Stefan Ubbink,
+Paul Wouters, Tim Wicinski, and the many members of the DNSOP working
+group that discussed this draft.
 
 
 # Current algorithm usage levels
