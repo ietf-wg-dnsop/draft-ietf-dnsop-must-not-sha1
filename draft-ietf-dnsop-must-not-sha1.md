@@ -63,8 +63,8 @@ It updates RFC4034 and RFC5155 as it deprecates the use of these algorithms.
 The security of the SHA-1 algorithm {{RFC3174}} has been slowly diminishing
 over time as various forms of attacks have weakened its cryptographic
 underpinning.  DNSSEC {{RFC9364}} originally made extensive use of SHA-1 as a
-cryptographic verification algorithm in RRSIG and Delegation Signer (DS)
-records, for example.  Since then, multiple other signing algorithms with
+cryptographic hash algorithm in RRSIG and Delegation Signer (DS)
+records, for example.  Since then, multiple other algorithms with
 stronger cryptographic strength are now widely available for DS records (such
 as SHA-256 {{RFC4509}}, SHA-384 ({{RFC6605}})) and for DNSKEY and RRSIG records
 (such as RSASHA256 ({{RFC5702}}), RSASHA512 ({{RFC5702}}), ECDSAP256SHA256
@@ -103,12 +103,12 @@ records as an unsupported algorithm.
 
 This document reduces the risk that a zone cannot be validated due
 to lack of SHA-1 support in a validator, by guiding signers to choose
-a more interoperable signing algorithm.
+a more secure and interoperable algorithm.
 
 # Operational Considerations
 
 Zone owners currently making use of SHA-1 based algorithms should
-immediately switch to algorithms with stronger cryptographic strengths,
+immediately switch to algorithms with stronger cryptographic algorithms,
 such as those listed in the introduction.
 
 # IANA Considerations
@@ -126,11 +126,12 @@ All other columns should remain as currently specified.
 
 # Acknowledgments
 
-The authors appreciate the comments and suggestions from the following IETF
-participants in helping produce this document: Mark Andrews, Steve Crocker,
-Russ Housely, Shumon Huque, Paul Hoffman, S Moonesamy, Peter Dickson, Peter
-Thomassen, Stefan Ubbink, Paul Wouters, Tim Wicinski,  and the many members of
-the DNSOP working group that discussed this draft.
+The authors appreciate the comments and suggestions from the following
+IETF participants in helping produce this document: Mark Andrews,
+Steve Crocker, Russ Housely, Shumon Huque, Paul Hoffman, Barry Leiba,
+S Moonesamy, Peter Dickson, Peter Thomassen, Stefan Ubbink, Paul
+Wouters, Tim Wicinski, and the many members of the DNSOP working group
+that discussed this draft.
 
 
 # Current algorithm usage levels
