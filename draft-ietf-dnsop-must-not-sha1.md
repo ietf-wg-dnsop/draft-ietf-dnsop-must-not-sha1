@@ -96,7 +96,7 @@ Validating resolver implementations MUST continue to support
 validation using these algorithms as they are diminishing in use but
 still actively in use for some domains as of this publication.
 Because of RSASHA1 and RSASHA1-NSEC3-SHA1's non-zero use, deployed
-validating resolvers MAY by configured to continue to validate RRSIG
+validating resolvers MAY be configured to continue to validate RRSIG
 records that use these algorithms.  Validating resolvers deployed in
 more security strict environments MAY wish to treat these RRSIG
 records as an unsupported algorithm.
@@ -129,10 +129,10 @@ All other columns should remain as currently specified.
 
 The authors appreciate the comments and suggestions from the following
 IETF participants in helping produce this document: Mark Andrews,
-Steve Crocker, Russ Housely, Shumon Huque, Paul Hoffman, Barry Leiba,
-S Moonesamy, Yoav Nir, Peter Dickson, Peter Thomassen, Stefan Ubbink,
-Paul Wouters, Tim Wicinski, and the many members of the DNSOP working
-group that discussed this draft.
+Steve Crocker, Peter Dickson, Paul Hoffman, Russ Housley, Shumon
+Huque, Barry Leiba, S Moonesamy, Yoav Nir, Florian Obser, Peter
+Thomassen, Stefan Ubbink, Paul Wouters, Tim Wicinski, and the many
+members of the DNSOP working group that discussed this draft.
 
 
 # Current algorithm usage levels
