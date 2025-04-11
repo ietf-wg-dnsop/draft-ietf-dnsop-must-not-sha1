@@ -67,11 +67,11 @@ underpinning.  DNSSEC {{RFC9364}} originally {{RFC3110}} made extensive use
 of SHA-1 as a
 cryptographic hash algorithm in RRSIG and Delegation Signer (DS)
 records, for example.  Since then, multiple other algorithms with
-stronger cryptographic strength are now widely available for DS records (such
-as SHA-256 {{RFC4509}}, SHA-384 ({{RFC6605}})) and for DNSKEY and RRSIG records
-(such as RSASHA256 ({{RFC5702}}), RSASHA512 ({{RFC5702}}), ECDSAP256SHA256
-{{RFC6605}}, ECDSAP384SHA384 {{RFC6605}}, ED25519 {{RFC8080}}, and ED448
-{{RFC8080}}). Further, support for validating SHA-1 based signatures has been
+stronger cryptographic strength are now widely available for DS records 
+and for DNSKEY and RRSIG records. 
+Readers are encouraged to consider switching to one of the recommended algorithms 
+listed in the [DNSKEY-IANA] and [DS-IANA] tables, respectively.
+Further, support for validating SHA-1 based signatures has been
 removed from some systems. As a result, SHA-1 is no longer fully interoperable
 in the context of DNSSEC. As adequate alternatives exist, the use of SHA-1 is
 no longer advisable.
@@ -110,7 +110,7 @@ signatures since they are no longer considered to be secure.
 
 Zone owners currently making use of SHA-1 based algorithms should
 immediately switch to algorithms with stronger cryptographic algorithms,
-such as those listed in the introduction.
+such as the recommended algorithms in the [DNSKEY-IANA] and [DS-IANA] tables.
 
 # IANA Considerations
 
