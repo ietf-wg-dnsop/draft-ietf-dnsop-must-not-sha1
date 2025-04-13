@@ -1,5 +1,5 @@
 ---
-title: "Deprecating the use of SHA-1 in DNSSEC signature algorithms"
+title: "Deprecating the Use of SHA-1 in DNSSEC Signature Algorithms"
 abbrev: MUST NOT DNSSEC with SHA-1
 docname: draft-ietf-dnsop-must-not-sha1-05
 category: std
@@ -53,30 +53,32 @@ informative:
 --- abstract
 
 This document deprecates the use of the RSASHA1 and RSASHA1-NSEC3-SHA1
-algorithms for the creation of DNSKEY and RRSIG records.
+algorithms for the creation of DNS Public Key (DNSKEY) and resource record digital signature (RRSIG) records.
 
-It updates RFC4034 and RFC5155 as it deprecates the use of these algorithms.
+
+It updates RFC 4034 and RFC 5155 as it deprecates the use of these algorithms.
 
 --- middle
 
 # Introduction
 
-The security of the SHA-1 algorithm {{RFC3174}} has been slowly diminishing
+The security protection provided by the SHA-1 algorithm {{RFC3174}} has been slowly diminishing
 over time as various forms of attacks have weakened its cryptographic
 underpinning.  DNSSEC {{RFC9364}} originally {{RFC3110}} made extensive use
 of SHA-1 as a
-cryptographic hash algorithm in RRSIG and Delegation Signer (DS)
+cryptographic hash algorithm in resource record digital signature (RRSIG) and Delegation Signer (DS)
 records, for example.  Since then, multiple other algorithms with
-stronger cryptographic strength are now widely available for DS records 
-and for DNSKEY and RRSIG records. 
+stronger cryptographic strength are widely available for DS records 
+and for DNS Public Key (DNSKEY) and RRSIG records.
+
 Readers are encouraged to consider switching to one of the recommended algorithms 
-listed in the [DNSKEY-IANA] and [DS-IANA] tables, respectively.
+listed in [DNSKEY-IANA] and [DS-IANA], respectively.
 Further, support for validating SHA-1 based signatures has been
 removed from some systems. As a result, SHA-1 is no longer fully interoperable
 in the context of DNSSEC. As adequate alternatives exist, the use of SHA-1 is
 no longer advisable.
 
-This document thus further deprecates the use of RSASHA1 and
+This document deprecates the use of RSASHA1 and
 RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
 
 ## Requirements notation
@@ -87,7 +89,7 @@ RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
    in BCP 14 {{RFC2119}} {{?RFC8174}} when, and only when, they appear
    in all capitals, as shown here.
 
-# Deprecating RSASHA1 and RSASHA1-NSEC3-SHA1 algorithms in DNSSEC
+# Deprecating RSASHA1 and RSASHA1-NSEC3-SHA1 Algorithms in DNSSEC
 
 The RSASHA1 {{RFC4034}} and RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms
 MUST NOT be used when creating DNSKEY and RRSIG records.
@@ -110,7 +112,7 @@ signatures since they are no longer considered to be secure.
 
 Zone owners currently making use of SHA-1 based algorithms should
 immediately switch to algorithms with stronger cryptographic algorithms,
-such as the recommended algorithms in the [DNSKEY-IANA] and [DS-IANA] tables.
+such as the recommended algorithms in [DNSKEY-IANA] and [DS-IANA].
 
 # IANA Considerations
 
@@ -120,8 +122,6 @@ IANA is requested to set the "Use for DNSSEC Delegation" field of the
 IANA is requested to set the "Use for DNSSEC Signing" column of the
 DNS Security Algorithm Numbers registry {{DNSKEY-IANA}} to MUST NOT
 for the RSASHA1 (5) and RSASHA1-NSEC3-SHA1 (7) algorithms.
-
-All other columns should remain as currently specified.
 
 --- back
 
