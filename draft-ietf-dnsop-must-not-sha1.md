@@ -26,14 +26,10 @@ normative:
   RFC2119:
   RFC3110:
   RFC3174:
-  RFC4033:
   RFC4034:
-  RFC4035:
-  RFC4509:
   RFC5155:
-  RFC5702:
-  RFC6605:
-  RFC8080:
+  RFC8174:
+  RFC9499:
   RFC9364:
   DNSKEY-IANA:
     author:
@@ -49,11 +45,11 @@ normative:
 informative:
 
 
-
 --- abstract
 
 This document deprecates the use of the RSASHA1 and RSASHA1-NSEC3-SHA1
-algorithms for the creation of DNSKEY and RRSIG records.
+algorithms for the creation of DNS Public Key (DNSKEY) and Resource
+Record Signature (RRSIG) records.
 
 It updates RFC4034 and RFC5155 as it deprecates the use of these algorithms.
 
@@ -61,15 +57,15 @@ It updates RFC4034 and RFC5155 as it deprecates the use of these algorithms.
 
 # Introduction
 
-The security of the SHA-1 algorithm {{RFC3174}} has been slowly diminishing
+The security of the protection provided by the SHA-1 algorithm {{RFC3174}} has been slowly diminishing
 over time as various forms of attacks have weakened its cryptographic
 underpinning.  DNSSEC {{RFC9364}} originally {{RFC3110}} made extensive use
 of SHA-1 as a
 cryptographic hash algorithm in RRSIG and Delegation Signer (DS)
 records, for example.  Since then, multiple other algorithms with
 stronger cryptographic strength are now widely available for DS records 
-and for DNSKEY and RRSIG records. 
-Readers are encouraged to consider switching to one of the recommended algorithms 
+and for Resource Record Signature (DNSKEY) and DNS Public Key (RRSIG) records. 
+Operators are encouraged to consider switching to one of the recommended algorithms 
 listed in the [DNSKEY-IANA] and [DS-IANA] tables, respectively.
 Further, support for validating SHA-1 based signatures has been
 removed from some systems. As a result, SHA-1 is no longer fully interoperable
@@ -84,7 +80,7 @@ RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY",
    and "OPTIONAL" in this document are to be interpreted as described
-   in BCP 14 {{RFC2119}} {{?RFC8174}} when, and only when, they appear
+   in BCP 14 {{RFC2119}} {{RFC8174}} when, and only when, they appear
    in all capitals, as shown here.
 
 # Deprecating RSASHA1 and RSASHA1-NSEC3-SHA1 algorithms in DNSSEC
@@ -92,7 +88,8 @@ RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
 The RSASHA1 {{RFC4034}} and RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms
 MUST NOT be used when creating DNSKEY and RRSIG records.
 
-Validating resolver implementations MUST continue to support
+Validating resolver implementations ({{RFC9499}} section 10) 
+MUST continue to support
 validation using these algorithms as they are diminishing in use but
 still actively in use for some domains as of this publication.
 Because of RSASHA1 and RSASHA1-NSEC3-SHA1's non-zero use, deployed
