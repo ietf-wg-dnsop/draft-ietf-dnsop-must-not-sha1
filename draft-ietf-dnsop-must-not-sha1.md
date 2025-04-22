@@ -42,6 +42,13 @@ normative:
     target: "http://www.iana.org/assignments/ds-rr-types"
     title: Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms
 
+  draft-ietf-dnsop-algorithm-update:
+    author: 
+      name: Hardaker, W.
+      name: Kumari, W.
+    target: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-algorithm-update
+    title: Algorithm Implementation Requirements and Usage Guidance for DNSSEC
+
 informative:
 
 
@@ -66,7 +73,7 @@ records, for example.  Since then, multiple other algorithms with
 stronger cryptographic strength are now widely available for DS records 
 and for Resource Record Signature (DNSKEY) and DNS Public Key (RRSIG) records. 
 Operators are encouraged to consider switching to one of the recommended algorithms 
-listed in the [DNSKEY-IANA] and [DS-IANA] tables, respectively.
+listed in the {{DNSKEY-IANA}} and {{DS-IANA}} tables, respectively.
 Further, support for validating SHA-1 based signatures has been
 removed from some systems. As a result, SHA-1 is no longer fully interoperable
 in the context of DNSSEC. As adequate alternatives exist, the use of SHA-1 is
@@ -112,10 +119,12 @@ such as the recommended algorithms in the [DNSKEY-IANA] and [DS-IANA] tables.
 # IANA Considerations
 
 IANA is requested to set the "Use for DNSSEC Delegation" field of the
-"Digest Algorithms" registry {{DS-IANA}} for SHA-1 (1) to MUST NOT.
+"Digest Algorithms" registry {{DS-IANA}} {{draft-ietf-dnsop-algorithm-update}} 
+for SHA-1 (1) to MUST NOT.
 
 IANA is requested to set the "Use for DNSSEC Signing" column of the
-DNS Security Algorithm Numbers registry {{DNSKEY-IANA}} to MUST NOT
+DNS Security Algorithm Numbers registry {{DNSKEY-IANA}}
+{{draft-ietf-dnsop-algorithm-update}} to MUST NOT
 for the RSASHA1 (5) and RSASHA1-NSEC3-SHA1 (7) algorithms.
 
 All other columns should remain as currently specified.
@@ -126,7 +135,7 @@ All other columns should remain as currently specified.
 
 The authors appreciate the comments and suggestions from the following
 IETF participants in helping produce this document: Mark Andrews,
-Steve Crocker, Peter Dickson, Paul Hoffman, Russ Housley, Shumon
+Steve Crocker, Peter Dickson, Thomas Graf, Paul Hoffman, Russ Housley, Shumon
 Huque, Barry Leiba, S Moonesamy, Yoav Nir, Florian Obser, Peter
 Thomassen, Stefan Ubbink, Paul Wouters, Tim Wicinski, and the many
 members of the DNSOP working group that discussed this draft.
