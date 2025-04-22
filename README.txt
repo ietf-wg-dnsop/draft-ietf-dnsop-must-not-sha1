@@ -6,7 +6,7 @@ Network Working Group                                        W. Hardaker
 Internet-Draft                                                   USC/ISI
 Updates: 4034, 5155 (if approved)                              W. Kumari
 Intended status: Standards Track                                  Google
-Expires: 23 October 2025                                   21 April 2025
+Expires: 24 October 2025                                   22 April 2025
 
 
       Deprecating the use of SHA-1 in DNSSEC signature algorithms
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 October 2025.
+   This Internet-Draft will expire on 24 October 2025.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Hardaker & Kumari        Expires 23 October 2025                [Page 1]
+Hardaker & Kumari        Expires 24 October 2025                [Page 1]
 
 Internet-Draft         MUST NOT DNSSEC with SHA-1             April 2025
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Hardaker & Kumari        Expires 23 October 2025                [Page 2]
+Hardaker & Kumari        Expires 24 October 2025                [Page 2]
 
 Internet-Draft         MUST NOT DNSSEC with SHA-1             April 2025
 
@@ -151,11 +151,13 @@ Internet-Draft         MUST NOT DNSSEC with SHA-1             April 2025
 5.  IANA Considerations
 
    IANA is requested to set the "Use for DNSSEC Delegation" field of the
-   "Digest Algorithms" registry [DS-IANA] for SHA-1 (1) to MUST NOT.
+   "Digest Algorithms" registry [DS-IANA]
+   [draft-ietf-dnsop-algorithm-update] for SHA-1 (1) to MUST NOT.
 
    IANA is requested to set the "Use for DNSSEC Signing" column of the
-   DNS Security Algorithm Numbers registry [DNSKEY-IANA] to MUST NOT for
-   the RSASHA1 (5) and RSASHA1-NSEC3-SHA1 (7) algorithms.
+   DNS Security Algorithm Numbers registry [DNSKEY-IANA]
+   [draft-ietf-dnsop-algorithm-update] to MUST NOT for the RSASHA1 (5)
+   and RSASHA1-NSEC3-SHA1 (7) algorithms.
 
    All other columns should remain as currently specified.
 
@@ -163,9 +165,7 @@ Internet-Draft         MUST NOT DNSSEC with SHA-1             April 2025
 
 
 
-
-
-Hardaker & Kumari        Expires 23 October 2025                [Page 3]
+Hardaker & Kumari        Expires 24 October 2025                [Page 3]
 
 Internet-Draft         MUST NOT DNSSEC with SHA-1             April 2025
 
@@ -174,6 +174,12 @@ Internet-Draft         MUST NOT DNSSEC with SHA-1             April 2025
               IANA, "Domain Name System Security (DNSSEC) Algorithm
               Numbers", n.d., <https://www.iana.org/assignments/dns-sec-
               alg-numbers/dns-sec-alg-numbers.xhtml>.
+
+   [draft-ietf-dnsop-algorithm-update]
+              W., K., "Algorithm Implementation Requirements and Usage
+              Guidance for DNSSEC", n.d.,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-
+              algorithm-update>.
 
    [DS-IANA]  IANA, "Delegation Signer (DS) Resource Record (RR) Type
               Digest Algorithms", n.d.,
@@ -210,30 +216,29 @@ Internet-Draft         MUST NOT DNSSEC with SHA-1             April 2025
               RFC 9364, DOI 10.17487/RFC9364, February 2023,
               <https://www.rfc-editor.org/rfc/rfc9364>.
 
-   [RFC9499]  Hoffman, P. and K. Fujiwara, "DNS Terminology", BCP 219,
-              RFC 9499, DOI 10.17487/RFC9499, March 2024,
-              <https://www.rfc-editor.org/rfc/rfc9499>.
 
 
 
 
 
-
-
-
-Hardaker & Kumari        Expires 23 October 2025                [Page 4]
+Hardaker & Kumari        Expires 24 October 2025                [Page 4]
 
 Internet-Draft         MUST NOT DNSSEC with SHA-1             April 2025
 
+
+   [RFC9499]  Hoffman, P. and K. Fujiwara, "DNS Terminology", BCP 219,
+              RFC 9499, DOI 10.17487/RFC9499, March 2024,
+              <https://www.rfc-editor.org/rfc/rfc9499>.
 
 Appendix A.  Acknowledgments
 
    The authors appreciate the comments and suggestions from the
    following IETF participants in helping produce this document: Mark
-   Andrews, Steve Crocker, Peter Dickson, Paul Hoffman, Russ Housley,
-   Shumon Huque, Barry Leiba, S Moonesamy, Yoav Nir, Florian Obser,
-   Peter Thomassen, Stefan Ubbink, Paul Wouters, Tim Wicinski, and the
-   many members of the DNSOP working group that discussed this draft.
+   Andrews, Steve Crocker, Peter Dickson, Thomas Graf, Paul Hoffman,
+   Russ Housley, Shumon Huque, Barry Leiba, S Moonesamy, Yoav Nir,
+   Florian Obser, Peter Thomassen, Stefan Ubbink, Paul Wouters, Tim
+   Wicinski, and the many members of the DNSOP working group that
+   discussed this draft.
 
 Appendix B.  Current algorithm usage levels
 
@@ -272,9 +277,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-
-Hardaker & Kumari        Expires 23 October 2025                [Page 5]
+Hardaker & Kumari        Expires 24 October 2025                [Page 5]
