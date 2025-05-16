@@ -118,6 +118,9 @@ such as the recommended algorithms in the [DNSKEY-IANA] and [DS-IANA] tables.
 
 # IANA Considerations
 
+[Note to IANA, to be removed by the RFC Editor: the registry fields
+listed above will be created by draft-ietf-dnsop-rfc8624-bis.]
+
 IANA is requested to set the "Use for DNSSEC Delegation" field of the
 "Digest Algorithms" registry {{DS-IANA}} {{draft-ietf-dnsop-algorithm-update}} 
 for SHA-1 (1) to MUST NOT.
