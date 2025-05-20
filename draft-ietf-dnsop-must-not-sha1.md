@@ -70,7 +70,7 @@ underpinning.  DNSSEC {{RFC9364}} originally {{RFC3110}} made extensive use
 of SHA-1 as a
 cryptographic hash algorithm in RRSIG and Delegation Signer (DS)
 records, for example.  Since then, multiple other algorithms with
-stronger cryptographic strength are now widely available for DS records 
+stronger cryptographic strength have become widely available for DS records 
 and for Resource Record Signature (DNSKEY) and DNS Public Key (RRSIG) records. 
 Operators are encouraged to consider switching to one of the recommended algorithms 
 listed in the {{DNSKEY-IANA}} and {{DS-IANA}} tables, respectively.
