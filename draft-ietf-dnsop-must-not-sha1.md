@@ -102,7 +102,7 @@ still actively in use for some domains as of this publication.
 Because of RSASHA1 and RSASHA1-NSEC3-SHA1's non-zero use, deployed
 validating resolvers MAY be configured to continue to validate RRSIG
 records that use these algorithms.  Validating resolvers deployed in
-more security strict environments MAY wish to treat these RRSIG
+more security strict environments MAY treat these RRSIG
 records as an unsupported algorithm.
 
 # Security Considerations
