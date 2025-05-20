@@ -107,8 +107,9 @@ records as an unsupported algorithm.
 
 # Security Considerations
 
-This document deprecates the use of RSASHA1 and RSASHA1-NSEC3-SHA1
-signatures since they are no longer considered to be secure.
+This document deprecates the use of RSASHA1 and RSASHA1-NSEC3-SHA1 for
+DNSSEC Delegation and DNSSEC signing since these algorithms are no
+longer considered to be secure.
 
 # Operational Considerations
 
