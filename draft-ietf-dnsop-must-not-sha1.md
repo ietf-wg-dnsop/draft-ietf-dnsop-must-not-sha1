@@ -90,7 +90,7 @@ RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
    in BCP 14 {{RFC2119}} {{RFC8174}} when, and only when, they appear
    in all capitals, as shown here.
 
-# Deprecating RSASHA1 and RSASHA1-NSEC3-SHA1 algorithms in DNSSEC
+# Deprecating SHA-1 from DNSSEC Signatures and Delegation RRs
 
 The RSASHA1 {{RFC4034}} and RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms
 MUST NOT be used when creating DNSKEY and RRSIG records.
