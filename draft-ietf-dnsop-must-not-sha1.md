@@ -75,7 +75,8 @@ and for Resource Record Signature (DNSKEY) and DNS Public Key (RRSIG) records {{
 Operators are encouraged to consider switching to one of the recommended algorithms 
 listed in the {{DNSKEY-IANA}} and {{DS-IANA}} tables, respectively.
 Further, support for validating SHA-1 based signatures has been
-removed from some systems. As a result, SHA-1 is no longer fully interoperable
+removed from some systems. As a result, SHA-1 as part of a signature algorithm 
+is no longer fully interoperable
 in the context of DNSSEC. As adequate alternatives exist, the use of SHA-1 is
 no longer advisable.
 
@@ -117,7 +118,7 @@ longer considered to be secure.
 # Operational Considerations
 
 Zone owners currently making use of SHA-1 based algorithms should
-immediately switch to algorithms with stronger cryptographic algorithms,
+immediately roll to algorithms with stronger cryptographic algorithms,
 such as the recommended algorithms in the [DNSKEY-IANA] and [DS-IANA] tables.
 
 # IANA Considerations
