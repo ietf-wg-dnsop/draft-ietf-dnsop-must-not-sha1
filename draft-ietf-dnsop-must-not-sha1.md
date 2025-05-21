@@ -92,18 +92,21 @@ RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
 
 # Deprecating RSASHA1 and RSASHA1-NSEC3-SHA1 algorithms in DNSSEC
 
-The RSASHA1 {{RFC4034}} and RSASHA1-NSEC3-SHA1 {{RFC5155}} algorithms
-MUST NOT be used when creating DNSKEY and RRSIG records.
+The RSASHA1 [RFC4034] and RSASHA1-NSEC3-SHA1 [RFC5155] algorithms MUST NOT
+be used when creating DS records.  Validating resolvers MUST treat RSASHA1
+and RSASHA1-NSEC3-SHA1 DS records as insecure.  If no other DS records of
+accepted cryptographic algorithms are available, the DNS records below the
+delegation point MUST be treated as insecure.
 
-Validating resolver implementations ({{RFC9499}} section 10) 
-MUST continue to support
-validation using these algorithms as they are diminishing in use but
-still actively in use for some domains as of this publication.
-Because of RSASHA1 and RSASHA1-NSEC3-SHA1's non-zero use, deployed
-validating resolvers MAY be configured to continue to validate RRSIG
-records that use these algorithms.  Validating resolvers deployed in
-more security strict environments MAY treat these RRSIG
-records as an unsupported algorithm.
+The RSASHA1 [RFC4034] and RSASHA1-NSEC3-SHA1 [RFC5155] algorithms MUST NOT be
+used when creating DNSKEY and RRSIG records.  Validating resolver implementations
+([RFC9499] section 10) MUST continue to support validation using these
+algorithms as they are diminishing in use but still actively in use for some
+domains as of this publication.  Because of RSASHA1 and RSASHA1-NSEC3-SHA1's
+non-zero use, deployed validating resolvers MAY be configured to continue
+to validate RRSIG records that use these algorithms.  Validating
+resolvers deployed in more security strict environments MAY treat
+these RRSIG records as an unsupported algorithm.
 
 # Security Considerations
 
