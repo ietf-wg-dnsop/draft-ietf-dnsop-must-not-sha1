@@ -92,9 +92,9 @@ RSASHA1-NSEC3-SHA1 for DNS Security Algorithms.
 
 # Deprecating RSASHA1 and RSASHA1-NSEC3-SHA1 algorithms in DNSSEC
 
-The RSASHA1 [RFC4034] and RSASHA1-NSEC3-SHA1 [RFC5155] algorithms MUST NOT
-be used when creating DS records.  Validating resolvers MUST treat RSASHA1
-and RSASHA1-NSEC3-SHA1 DS records as insecure.  If no other DS records of
+The SHA1 [RFC4034] algorithms MUST NOT
+be used when creating DS records.  Validating resolvers MUST treat SHA1
+DS records as insecure.  If no other DS records of
 accepted cryptographic algorithms are available, the DNS records below the
 delegation point MUST be treated as insecure.
 
