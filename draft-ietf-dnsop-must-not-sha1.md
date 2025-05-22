@@ -42,13 +42,6 @@ normative:
     target: "http://www.iana.org/assignments/ds-rr-types"
     title: Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms
 
-  draft-ietf-dnsop-algorithm-update:
-    author: 
-      name: Hardaker, W.
-      name: Kumari, W.
-    target: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-algorithm-update
-    title: Algorithm Implementation Requirements and Usage Guidance for DNSSEC
-
 informative:
 
 
@@ -127,12 +120,12 @@ such as the recommended algorithms in the [DNSKEY-IANA] and [DS-IANA] tables.
 listed above will be created by draft-ietf-dnsop-rfc8624-bis.]
 
 IANA is requested to set the "Use for DNSSEC Delegation" field of the
-"Digest Algorithms" registry {{DS-IANA}} {{draft-ietf-dnsop-algorithm-update}} 
+"Digest Algorithms" registry {{DS-IANA}} {{!I-D.ietf-dnsop-rfc8624-bis}} 
 for SHA-1 (1) to MUST NOT.
 
 IANA is requested to set the "Use for DNSSEC Signing" column of the
 DNS Security Algorithm Numbers registry {{DNSKEY-IANA}}
-{{draft-ietf-dnsop-algorithm-update}} to MUST NOT
+{{!I-D.ietf-dnsop-rfc8624-bis}} to MUST NOT
 for the RSASHA1 (5) and RSASHA1-NSEC3-SHA1 (7) algorithms.
 
 All other columns should remain as currently specified.
