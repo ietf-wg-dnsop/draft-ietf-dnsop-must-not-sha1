@@ -67,9 +67,9 @@ It updates RFC4034 and RFC5155 as it deprecates the use of these algorithms.
 The security of the protection provided by the SHA-1 algorithm {{RFC3174}} has been slowly diminishing
 over time as various forms of attacks have weakened its cryptographic
 underpinning.  DNSSEC {{RFC9364}} originally {{RFC3110}} made extensive use
-of SHA-1 as a
+of SHA-1, for example as a
 cryptographic hash algorithm in RRSIG and Delegation Signer (DS)
-records, for example.  Since then, multiple other algorithms with
+records.  Since then, multiple other algorithms with
 stronger cryptographic strength have become widely available for DS records 
 and for Resource Record Signature (DNSKEY) and DNS Public Key (RRSIG) records {{RFC4034}}. 
 Operators are encouraged to consider switching to one of the recommended algorithms 
