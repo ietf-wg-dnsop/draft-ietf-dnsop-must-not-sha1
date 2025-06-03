@@ -1,7 +1,7 @@
 ---
 title: "Deprecating the use of SHA-1 in DNSSEC signature algorithms"
 abbrev: MUST NOT DNSSEC with SHA-1
-docname: draft-ietf-dnsop-must-not-sha1-08
+docname: draft-ietf-dnsop-must-not-sha1-09
 category: std
 ipr: trust200902
 stream: IETF
@@ -113,6 +113,13 @@ longer considered to be secure.
 Zone owners currently making use of SHA-1 based algorithms should
 immediately roll to algorithms with stronger cryptographic algorithms,
 such as the recommended algorithms in the [DNSKEY-IANA] and [DS-IANA] tables.
+
+Operators should take care when deploying software packages and
+operating systems that may have already removed support for the SHA-1
+algorithm.  In these situations software may need to be manually built
+and deployed by an operator to continue supporting the required levels
+indicated by the "Use for DNSSEC Validation" and "Implement for DNSSEC
+Validation" columns, which this document is not changing.
 
 # IANA Considerations
 
